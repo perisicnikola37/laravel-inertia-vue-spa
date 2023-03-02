@@ -3,6 +3,17 @@
 
 The application is designed to provide a smooth and interactive user experience. This SPA offers an all-in-one solution for managing users and roles, featuring an easy-to-use dashboard for administrators.
 
+> Users page 
+
+<a href="https://postimg.cc/q6TtGCJM" target="_blank"><img src="https://i.postimg.cc/PJLmTm0Z/users.png" alt="users"/></a><br/><br/>
+> Roles page 
+
+<a href="https://postimg.cc/14GV3MBg" target="_blank"><img src="https://i.postimg.cc/CMtGJQf4/roles.png" alt="roles"/></a><br/><br/>
+
+> Live search
+
+<a href="https://postimg.cc/bS9ZVNr0" target="_blank"><img src="https://i.postimg.cc/x8WLCXSZ/search.png" alt="search"/></a><br/><br/>
+
 ## Installation
 
 To get started with the installation, follow these steps:
@@ -34,6 +45,11 @@ This application includes the following features:
 - User authentication and authorization
 - CRUD operations for users and roles
 - Real-time updates using Inertia.js and Vue.js
+- Live search
+- Data pagination
+- Progress indicator
+- Intuitive and responsive design
+- Multi-factor authentication
 
 ## Contributing
 
@@ -48,3 +64,11 @@ If you would like to contribute to this project, please follow these steps:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
+<hr>
+
+> team nullable()
+
+<div>
+<a href="https://perisicnikola37.github.io/nullable" target="_blank"><img src="https://i.postimg.cc/LXgdny5s/nullable.jpg" width="35"></a>
+</div>
+
