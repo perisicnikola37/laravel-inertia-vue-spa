@@ -4,7 +4,7 @@
         <template #header>
             <h2 class="flex justify-between font-semibold text-xl text-gray-800 leading-tight">
                 Roles
-                <inertia-link href="/roles/create">
+                <inertia-link href="roles/create">
                     <a
                         class="text-sm border border-green-300 px-4 py-2 rounded-full text-green-600 hover:bg-green-600 hover:text-white hover:border-transparent mr-3 transition">Create
                         role</a>
@@ -131,6 +131,14 @@ export default {
     },
     props: {
         roles: Object
+    },
+    methods: {
+        deleteRole(role) {
+            if (!confirm('Are you sure want to delete role?')) return;
+            this.$inertia.delete(route('roles.destroy', role.id), {
+                _token: this.$page.props.csrf_token,
+            });
+        },
     }
 }
 </script>

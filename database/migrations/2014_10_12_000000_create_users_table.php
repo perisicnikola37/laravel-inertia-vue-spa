@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->bigInteger('role_id')->unsigned()->index()->nullable();
-            $table->foreign('role_id')->references('id')->on('roles')->cascadeOnDelete();
+            // $table->foreign('role_id')->references('id')->on('roles')->cascadeOnDelete();
             $table->timestamps();
         });
 

@@ -24,7 +24,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Roles/Create');
     }
 
     /**
@@ -48,7 +48,9 @@ class RoleController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $role = Role::findOrFail($id);
+
+        return Inertia::render('Roles/Edit', compact('role'));
     }
 
     /**
@@ -64,6 +66,8 @@ class RoleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Role::destroy($id);
+
+        return back();
     }
 }
