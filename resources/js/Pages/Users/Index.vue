@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<AppLayout>
+		<AppLayout title="Users">
 
 			<div class="py-12">
 
@@ -70,7 +70,7 @@
 									</td>
 									<td class="px-6 py-4 whitespace-nowrap">
 										<div class="text-sm text-center text-gray-900">
-											<!-- {{ user.role.name }} -->
+											{{ user.role.name }}
 										</div>
 									</td>
 									<td class="px-6 py-4 text-center whitespace-nowrap">
