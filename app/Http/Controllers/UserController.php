@@ -23,7 +23,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Users/Create');
     }
 
     /**
@@ -47,7 +47,9 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        return Inertia::render('Users/Edit', compact('user'));
     }
 
     /**
@@ -65,6 +67,6 @@ class UserController extends Controller
     {
         User::destroy($id);
 
-        return back();
+        return back()->with('delete', 'User has been deleted!');
     }
 }

@@ -302,6 +302,27 @@ const logout = () => {
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <slot name="header" />
                 </div>
+
+                <div v-if="$page.props.flash.success" class="bg-indigo-900 text-center py-4 lg:px-4">
+                    <div style="background-color: #6875F5"
+                        class="p-2 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+                        role="alert">
+                        <span
+                            class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Success</span>
+                        <span class="font-semibold mr-2 text-left flex-auto">{{ $page.props.flash.success }}</span>
+                    </div>
+                </div>
+
+                <div v-if="$page.props.flash.delete" class="bg-indigo-900 text-center py-4 lg:px-4">
+                    <div style="background-color: #6875F5"
+                        class="p-2 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+                        role="alert">
+                        <span
+                            class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Success</span>
+                        <span class="font-semibold mr-2 text-left flex-auto">{{ $page.props.flash.delete }}</span>
+                    </div>
+                </div>
+
             </header>
 
             <!-- Page Content -->

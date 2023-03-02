@@ -68,6 +68,6 @@ class RoleController extends Controller
     {
         Role::destroy($id);
 
-        return back();
+        return back()->with('delete', 'Role has been deleted!');
     }
 }
