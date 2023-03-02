@@ -66,7 +66,7 @@
                             <tr v-for="role in roles" :key="role.id">
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center justify-center">
-                                        <div class="ml-4">
+                                        <div>
                                             <div class="text-sm font-medium text-gray-900">
                                                 {{ role.id }}
                                             </div>

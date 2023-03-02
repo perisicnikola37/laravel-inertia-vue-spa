@@ -65,18 +65,21 @@
 									</td>
 									<td class="px-6 py-4 whitespace-nowrap">
 										<div class="text-sm text-center text-gray-900">
+											<!-- Clickable user email address -->
 											<a :href="'mailto:' + user.email">{{ user.email }}</a>
 										</div>
 									</td>
 									<td class="px-6 py-4 whitespace-nowrap">
 										<div class="text-sm text-center text-gray-900">
-											{{ user.role.name }}
+											<!-- Covering the case when there is no role -->
+											{{ user.role ? user.role.name : 'Not available' }}
 										</div>
 									</td>
 									<td class="px-6 py-4 text-center whitespace-nowrap">
 										<span
 											class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
-											<!-- {{ user.formatted_created_at }} -->
+											<!-- Formatted from user model appends propety -->
+											{{ user.formatted_created_at }}
 										</span>
 									</td>
 									<td class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
@@ -118,6 +121,12 @@ export default {
 	},
 	props: {
 		users: Object
+	},
+	methods: {
+		deleteUser(user) {
+			if (!confirm('Are you sure you want to delete user?')) return;
+			this.$inertia.delete(route('users.destroy', user.id));
+		}
 	}
 }
 </script>
