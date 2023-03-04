@@ -1,7 +1,17 @@
-# Laravel 10 + Inertia.js + Vue 3 -> single page application
-### Used - Laravel Jetstream
+## Laravel 10 + Inertia.js + Vue 3 -> single page application
 
+<div style="display: flex;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png" alt="Laravel Logo" style="width: 40px;">
+  <img src="https://user-images.githubusercontent.com/79047182/222930653-4c8079bc-30f0-43e1-9c63-b50a9ad68320.png" alt="image" style="width: 40px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png" alt="Vue.js Logo" style="width: 40px;">
+ <img src="https://ih1.redbubble.net/image.2428884987.0603/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="Redbubble Image" style="width: 40px;">
+</div>
+<br>
 The application is designed to provide a smooth and interactive user experience. This SPA offers an all-in-one solution for managing users and roles, featuring an easy-to-use dashboard for administrators.
+
+## Preview
+
+[gif.webm](https://user-images.githubusercontent.com/79047182/222930543-9883369c-1d8f-4985-9b61-baa933122596.webm)
 
 ## Installation
 
