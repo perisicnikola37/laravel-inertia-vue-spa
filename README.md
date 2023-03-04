@@ -50,6 +50,10 @@ This application includes the following features:
 - User authentication and authorization
 - CRUD operations for users and roles
 - Real-time updates using Inertia.js and Vue.js
+- Two factor authentication
+- Browser sessions
+- Full text searching
+- Pagination
 
 ## Contributing
 
