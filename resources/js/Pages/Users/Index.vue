@@ -22,9 +22,11 @@
 						<div class="mb-3 xl:w-96">
 							<div class="relative flex items-stretch w-4/5 mb-3 input-group">
 
-								<input id="search" type='text' v-model="term" @keyup="search"
+								<input type="text" v-model="term" @keyup="search">
+
+								<!-- <input id="search" type='text' v-model="term" @keyup="search"
 									class="outline-none focus:ring-0 rounded-r-none form-control relative min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0"
-									placeholder="Search...">
+									placeholder="Search..."> -->
 
 								<button
 									class="rounded-l-none btn px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center"
@@ -64,7 +66,7 @@
 							</tr>
 						</thead>
 						<tbody class="bg-white divide-y divide-gray-200">
-							<tr v-for="user in users" :key="user.id">
+							<tr v-for="user in users.data" :key="user.id">
 								<td class="px-6 py-4 whitespace-nowrap">
 									<div class="flex items-center justify-center">
 										<div class="ml-4">
@@ -113,7 +115,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<!-- <Pagination class="mt-6" :links="users.links" /> -->
+					<Pagination class="mt-6" :links="users.links" />
 				</div>
 			</div>
 		</div>
@@ -122,18 +124,28 @@
 
 <script>
 import AppLayout from '@/Layouts/AppLayout.vue';
+import Pagination from '@/Components/Pagination.vue';
 export default {
 	components: {
-		AppLayout
+		AppLayout,
+		Pagination
 	},
 	props: {
 		users: Object
+	},
+	data() {
+		return {
+			term: this.$page.term || '',
+		}
 	},
 	methods: {
 		deleteUser(user) {
 			if (!confirm('Are you sure you want to delete user?')) return;
 			this.$inertia.delete(route('users.destroy', user.id));
-		}
+		},
+		search() {
+			this.$inertia.replace(this.route('users.index', { term: this.term }))
+		},
 	}
 }
 </script>
