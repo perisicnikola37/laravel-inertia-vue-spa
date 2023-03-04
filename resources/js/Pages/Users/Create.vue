@@ -20,7 +20,7 @@
                             <input v-model="form.name"
                                 class="mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="name" type="text">
-                            <!-- <span class="text-red-500">{{ errors.name }}</span> -->
+                            <span class="text-red-500">{{ errors.name }}</span>
                         </div>
 
                         <div class="mb-4">
@@ -30,7 +30,7 @@
                             <input v-model="form.email"
                                 class="mb-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="email" type="email">
-                            <!-- <span class="text-red-500">{{ errors.email }}</span> -->
+                            <span class="text-red-500">{{ errors.email }}</span>
                         </div>
 
                         <div class="mb-4">
@@ -50,7 +50,7 @@
                             <input v-model="form.password"
                                 class="mb- 2shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="password" type="password">
-                            <!-- <span class="text-red-500">{{ errors.password }}</span> -->
+                            <span class="text-red-500">{{ errors.password }}</span>
                         </div>
 
                         <div class="flex items-center justify-between">
@@ -77,6 +77,9 @@ export default {
     components: {
         AppLayout,
         Button
+    },
+    props: {
+        errors: Object,
     },
     data() {
         return {
