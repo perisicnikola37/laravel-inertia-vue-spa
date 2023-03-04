@@ -76,7 +76,7 @@ import Button from '@/Components/Button.vue';
 export default {
     components: {
         AppLayout,
-        Button
+        Button,
     },
     props: {
         errors: Object,
