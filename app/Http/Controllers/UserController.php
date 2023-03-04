@@ -44,7 +44,9 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $getUser = User::findOrFail($id);
+
+        return Inertia::render('Users/Show', compact('getUser'));
     }
 
     /**
