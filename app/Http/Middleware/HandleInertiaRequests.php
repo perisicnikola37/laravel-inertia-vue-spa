@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -41,6 +43,10 @@ class HandleInertiaRequests extends Middleware
                 'success' => session('success'),
                 'delete' => session('delete'),
             ],
+            'counts' => [
+                'userCount' => User::count(),
+                'roleCount' => Role::count(),
+            ]
         ]);
     }
 }
