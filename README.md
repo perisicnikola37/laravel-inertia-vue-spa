@@ -7,25 +7,31 @@ The application is designed to provide a smooth and interactive user experience.
 
 To get started with the installation, follow these steps:
 
-1. Clone the repository:
+1. Clone the repository
 ``git clone https://github.com/perisicnikola37/laravel-inertia-vue-spa.git``
 
-2. Install the dependencies:
-``cd laravel-inertia-vue-project
-composer install
-npm install``
+2. Enter project directory
+``cd laravel-inertia-vue-project``
 
-3. Set up the environment variables:
-``cp .env.example .env
-php artisan key:generate``
+3. Install/update composer
+``composer install | composer update``
 
-4. Configure the database:
+4. Install npm
+``npm install``
+
+3. Set up the environment variables
+``cp .env.example .env``
+
+4. Generate an application key
+``php artisan key:generate``
+
+5. Configure the database
 ``php artisan migrate``
 
-5. Start the development server:
+6. Start the development server
 ``npm run dev``
 
-6. Visit the application at [http://localhost:8000](http://localhost:8000)
+7. Visit the application at [http://localhost:8000](http://localhost:8000)
 
 ## Features
 
