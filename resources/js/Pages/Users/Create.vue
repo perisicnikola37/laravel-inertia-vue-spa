@@ -83,7 +83,7 @@ export default {
             form: this.$inertia.form({
                 name: '',
                 email: '',
-                role_id: 1,
+                role_id: 2,
                 password: '',
             })
         }

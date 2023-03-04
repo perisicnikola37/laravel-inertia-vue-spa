@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserStoreRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -16,7 +17,7 @@ class UserController extends Controller
         return Inertia::render('Users/Index', [
             'users' => User::with('role')->when($request->term, function ($query, $term) {
                 $query->where('name', 'LIKE', '%' . $term . '%');
-            })->paginate(5),
+            })->latest()->paginate(5),
         ]);
     }
 
@@ -31,9 +32,11 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(UserStoreRequest $request)
     {
-        //
+        User::create($request->validated());
+
+        return to_route('users.index')->with('success', 'User has been created!');
     }
 
     /**
