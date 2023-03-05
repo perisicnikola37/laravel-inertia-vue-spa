@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserStoreRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 class UserController extends Controller
@@ -34,9 +35,16 @@ class UserController extends Controller
      */
     public function store(UserStoreRequest $request)
     {
-        User::create($request->validated());
+        $validatedData = $request->validated();
 
-        return to_route('users.index')->with('success', 'User has been created!');
+        if ($request->hasFile('avatar')) {
+            $avatarPath = $request->file('avatar')->store('public/avatars');
+            $validatedData['avatar'] = Storage::url($avatarPath);
+        }
+
+        User::create($validatedData);
+
+        return redirect()->route('users.index')->with('success', 'User has been created!');
     }
 
     /**

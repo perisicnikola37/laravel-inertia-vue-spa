@@ -16,11 +16,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('avatar')->default('placeholder');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
-            $table->string('profile_photo_path', 2048)->nullable();
             $table->bigInteger('role_id')->unsigned()->index()->nullable();
             // $table->foreign('role_id')->references('id')->on('roles')->cascadeOnDelete();
             $table->timestamps();

@@ -1,17 +1,19 @@
 <template>
     <AppLayout title="User profile">
         <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-            <div class="max-w-lg w-full bg-white shadow-lg rounded-lg overflow-hidden">
-                <img class="w-full h-64 object-cover" :src="user.coverImage" alt="User cover image">
+            <div class="w-full max-w-lg overflow-hidden bg-white rounded-lg shadow-lg">
+                <img class="object-cover w-full h-64" :src="user.coverImage" alt="User cover image">
                 <div class="p-4">
-                    <img class="h-24 w-24 rounded-full mx-auto mb-4" :src="user.profileImage" alt="User profile image">
+
+                    <img class="w-24 h-24 mx-auto mb-4 rounded-full" :src="userAvatar" alt="User profile image">
+
                     <h1 class="text-2xl font-bold text-center">{{ getUser.name }}</h1>
                     <center>
-                        <a :href="'mailto:' + getUser.email" class="text-gray-600 text-center">{{ getUser.email }}</a>
+                        <a :href="'mailto:' + getUser.email" class="text-center text-gray-600">{{ getUser.email }}</a>
                     </center>
                     <hr class="my-4">
                     <div class="my-2">
-                        <h2 class="text-gray-600 text-sm font-bold uppercase">About</h2>
+                        <h2 class="text-sm font-bold text-gray-600 uppercase">About</h2>
                         <p class="mt-2 text-gray-600">{{ user.about }}</p>
                     </div>
                 </div>
@@ -32,7 +34,14 @@ export default {
     },
     data() {
         return {
-            user: {}
+            user: {},
+        }
+    },
+    computed: {
+        userAvatar() {
+            return this.getUser.avatar !== 'placeholder'
+                ? this.getUser.avatar
+                : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png';
         }
     },
     mounted() {
