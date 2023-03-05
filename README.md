@@ -54,6 +54,7 @@ This application includes the following features:
 - Browser sessions
 - Full text searching
 - Pagination
+- Multi delete users
 
 ## Contributing
 

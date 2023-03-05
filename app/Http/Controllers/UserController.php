@@ -78,4 +78,12 @@ class UserController extends Controller
 
         return back()->with('delete', 'User has been deleted!');
     }
+
+    public function deleteMultiple(Request $request)
+    {
+        $userIds = $request->input('ids');
+        User::whereIn('id', $userIds)->delete();
+
+        return redirect()->route('users.index')->with('success', 'Operation successfully!');
+    }
 }

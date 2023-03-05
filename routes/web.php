@@ -15,6 +15,9 @@ Route::get('/', function () {
     ]);
 });
 
+Route::post('/users/delete', [UserController::class, 'deleteMultiple'])->name('users.delete');
+
+
 Route::resource('/users', UserController::class);
 Route::resource('/roles', RoleController::class);
 
