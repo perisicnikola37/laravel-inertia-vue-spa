@@ -20,8 +20,8 @@
 				<div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
 
 					<a href="#" @click="deleteSelectedUsers"
-						class="float-left px-4 mt-3 py-2 text-red-400 duration-100 rounded hover:text-red-600">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6">
+						class="float-left px-4 py-2 mt-3 text-red-400 duration-100 rounded hover:text-red-600">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor"
 								fill="none"
 								d="M3 6h18M6 6l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 4v-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1" />
@@ -60,6 +60,10 @@
 								</th>
 								<th scope="col"
 									class="px-6 py-3 text-xs font-medium tracking-wider text-center text-gray-500 uppercase">
+									Avatar
+								</th>
+								<th scope="col"
+									class="px-6 py-3 text-xs font-medium tracking-wider text-center text-gray-500 uppercase">
 									Name
 								</th>
 								<th scope="col"
@@ -89,6 +93,11 @@
 									<div class="text-sm text-center text-gray-900">
 										{{ user.id }}
 									</div>
+								</td>
+								<td>
+									<img class="w-10 h-10 mx-auto rounded-full"
+										:src="user.avatar != 'placeholder' ? user.avatar : $page.props.avatar"
+										alt="User profile image">
 								</td>
 								<td class="px-6 py-4 whitespace-nowrap">
 									<div class="flex items-center justify-center">
@@ -194,6 +203,13 @@ export default {
 			} catch (error) {
 				console.error(error);
 				alert('An error occurred while deleting the selected users.');
+			}
+		},
+		computed: {
+			userAvatar(user) {
+				return this.user.avatar !== 'placeholder'
+					? this.user.avatar
+					: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png';
 			}
 		},
 	}
