@@ -55,7 +55,10 @@ This application includes the following features:
 - Full text searching
 - Pagination
 - Multi delete users
-
+- Inertia.ks progress indicator
+- Font Awesome icons
+- Application analytics
+- User default profile avatar
 ## Contributing
 
 If you would like to contribute to this project, please follow these steps:

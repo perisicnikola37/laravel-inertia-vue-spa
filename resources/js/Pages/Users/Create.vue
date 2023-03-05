@@ -25,6 +25,16 @@
                         </div>
 
                         <div class="mb-4">
+                            <label class="block mb-2 text-sm font-bold text-gray-700" for="name">
+                                Description <span class="text-red-500">*</span>
+                            </label>
+                            <input v-model="form.description"
+                                class="w-full px-3 py-2 mb-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                id="description" type="text">
+                            <span class="text-red-500">{{ errors.description }}</span>
+                        </div>
+
+                        <div class="mb-4">
                             <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
                                 E-mail <span class="text-red-500">*</span>
                             </label>
@@ -77,7 +87,6 @@
     </AppLayout>
 </template>
 
-
 <script>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Button from '@/Components/Button.vue';
@@ -97,7 +106,8 @@ export default {
                 email: '',
                 role_id: 2,
                 password: '',
-                avatar: null
+                avatar: null,
+                description: ''
             })
         }
     },

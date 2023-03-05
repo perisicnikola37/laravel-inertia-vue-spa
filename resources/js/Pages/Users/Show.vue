@@ -14,7 +14,11 @@
                     <hr class="my-4">
                     <div class="my-2">
                         <h2 class="text-sm font-bold text-gray-600 uppercase">About</h2>
-                        <p class="mt-2 text-gray-600">{{ user.about }}</p>
+                        <p class="mt-2 text-gray-600">{{ getUser.description != 'placeholder'
+                            ? getUser.description
+                            : 'No data available.'
+                        }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -27,7 +31,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 
 export default {
     components: {
-        AppLayout
+        AppLayout,
     },
     props: {
         getUser: Object,

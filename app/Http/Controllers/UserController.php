@@ -18,7 +18,8 @@ class UserController extends Controller
     {
         return Inertia::render('Users/Index', [
             'users' => User::with('role')->when($request->term, function ($query, $term) {
-                $query->where('name', 'LIKE', '%' . $term . '%');
+                $query->where('name', 'LIKE', '%' . $term . '%')
+                    ->orWhere('email', 'LIKE', '%' . $term . '%');
             })->latest()->paginate(5),
         ]);
     }
