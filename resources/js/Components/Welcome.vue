@@ -4,14 +4,14 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 
 <template>
     <div>
-        <div class="p-6 lg:p-8 bg-white border-b border-gray-200">
-            <ApplicationLogo class="block h-12 w-auto" />
+        <div class="p-6 bg-white border-b border-gray-200 lg:p-8">
+            <ApplicationLogo class="block w-auto h-12" />
 
             <h4 class="mt-8 text-2xl font-medium text-gray-900">
-                Welcome to SPA - single project application demo project!
+                Welcome to <b>SPA</b> - single project application demo project!
             </h4>
 
-            <p class="mt-6 text-gray-500 leading-relaxed">
+            <p class="mt-6 leading-relaxed text-gray-500">
                 This SPA offers an all-in-one solution for managing users and roles, featuring an easy-to-use dashboard
                 for
                 administrators.
@@ -29,7 +29,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 
         </div>
 
-        <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8">
+        <div class="grid grid-cols-1 gap-6 p-6 bg-gray-200 bg-opacity-25 md:grid-cols-2 lg:gap-8 lg:p-8">
             <div>
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -48,7 +48,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                         class="inline-flex items-center font-semibold text-indigo-700">
                         Explore the repository documentation
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="ml-1 w-5 h-5 fill-indigo-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-5 h-5 ml-1 fill-indigo-500">
                             <path fill-rule="evenodd"
                                 d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
                                 clip-rule="evenodd" />
@@ -75,7 +75,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                         class="inline-flex items-center font-semibold text-indigo-700">
                         Explore the repository
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="ml-1 w-5 h-5 fill-indigo-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-5 h-5 ml-1 fill-indigo-500">
                             <path fill-rule="evenodd"
                                 d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
                                 clip-rule="evenodd" />

@@ -3,7 +3,10 @@
 
 		<template #header>
 			<h2 class="flex justify-between text-xl font-semibold leading-tight text-gray-800">
-				Users
+				<p>
+					Users
+					<i class="fa-solid fa-user-group"></i>
+				</p>
 
 				<inertia-link href="users/create">
 					<a

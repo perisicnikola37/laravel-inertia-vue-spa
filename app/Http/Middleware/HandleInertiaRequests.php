@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -47,7 +48,10 @@ class HandleInertiaRequests extends Middleware
                 'userCount' => User::count(),
                 'roleCount' => Role::count(),
             ],
-            'avatar' => 'https://painrehabproducts.com/wp-content/uploads/2014/10/facebook-default-no-profile-pic.jpg'
+            'avatar' => 'https://painrehabproducts.com/wp-content/uploads/2014/10/facebook-default-no-profile-pic.jpg',
+            'auth' => [
+                'user' => Auth::user()
+            ]
         ]);
     }
 }

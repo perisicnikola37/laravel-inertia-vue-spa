@@ -2,11 +2,14 @@
     <AppLayout title="Roles">
 
         <template #header>
-            <h2 class="flex justify-between font-semibold text-xl text-gray-800 leading-tight">
-                Roles
+            <h2 class="flex justify-between text-xl font-semibold leading-tight text-gray-800">
+                <p>
+                    Roles
+                    <i class="fa-solid fa-user-gear"></i>
+                </p>
                 <inertia-link href="roles/create">
                     <a
-                        class="text-sm border border-green-300 px-4 py-2 rounded-full text-green-600 hover:bg-green-600 hover:text-white hover:border-transparent mr-3 transition">Create
+                        class="px-4 py-2 mr-3 text-sm text-green-600 transition border border-green-300 rounded-full hover:bg-green-600 hover:text-white hover:border-transparent">Create
                         role</a>
                 </inertia-link>
 
@@ -15,11 +18,11 @@
 
         <div class="py-12">
 
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
                     <div class="flex justify-end mt-3">
                         <div class="mb-3 xl:w-96">
-                            <div class="input-group relative flex items-stretch w-4/5 mb-3">
+                            <div class="relative flex items-stretch w-4/5 mb-3 input-group">
 
                                 <input id="search" type='text' v-model="term" @keyup="search"
                                     class="outline-none focus:ring-0 rounded-r-none form-control relative min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0"
@@ -42,19 +45,19 @@
                         <thead class="bg-gray-50">
                             <tr>
                                 <th scope="col"
-                                    class="text-center px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    class="px-6 py-3 text-xs font-medium tracking-wider text-center text-gray-500 uppercase">
                                     ID
                                 </th>
                                 <th scope="col"
-                                    class="text-center px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    class="px-6 py-3 text-xs font-medium tracking-wider text-center text-gray-500 uppercase">
                                     Name
                                 </th>
                                 <th scope="col"
-                                    class="text-center px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    class="px-6 py-3 text-xs font-medium tracking-wider text-center text-gray-500 uppercase">
                                     Created at
                                 </th>
                                 <th scope="col"
-                                    class="text-center px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    class="px-6 py-3 text-xs font-medium tracking-wider text-center text-gray-500 uppercase">
                                     User count
                                 </th>
                                 <th scope="col" class="relative px-6 py-3">
@@ -74,38 +77,38 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-center text-sm text-gray-900">
+                                    <div class="text-sm text-center text-gray-900">
                                         <inertia-link class="transition hover:text-blue-500" :href="`roles/${role.id}`">{{
                                             role.name }}</inertia-link>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-center text-sm text-gray-900">
+                                    <div class="text-sm text-center text-gray-900">
                                         <span
-                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                            class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
                                             {{ role.formatted_created_at }}
                                         </span>
                                     </div>
                                 </td>
-                                <td class="text-center px-6 py-4 whitespace-nowrap">
+                                <td class="px-6 py-4 text-center whitespace-nowrap">
                                     <span
-                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-200 text-purple-800">
+                                        class="inline-flex px-2 text-xs font-semibold leading-5 text-purple-800 bg-purple-200 rounded-full">
                                         {{ role.count }}
                                     </span>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                <td class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
 
                                     <inertia-link :href="`/roles/${role.id}/edit`"
-                                        class="float-left text-green-400 hover:text-green-600 py-2 px-4  rounded duration-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        class="float-left px-4 py-2 text-green-400 duration-100 rounded hover:text-green-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                         </svg></inertia-link>
 
                                     <a href="#" @click="deleteRole(role)"
-                                        class="duration-100 ml-2 float-left text-red-400 hover:text-red-600 py-2 px-4  rounded">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        class="float-left px-4 py-2 ml-2 text-red-400 duration-100 rounded hover:text-red-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />

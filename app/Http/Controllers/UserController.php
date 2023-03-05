@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserStoreRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
@@ -42,6 +43,7 @@ class UserController extends Controller
             $validatedData['avatar'] = Storage::url($avatarPath);
         }
 
+        $validatedData['password'] = Hash::make($validatedData['password']);
         User::create($validatedData);
 
         return redirect()->route('users.index')->with('success', 'User has been created!');
