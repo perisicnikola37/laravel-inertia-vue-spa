@@ -88,8 +88,8 @@
 </template>
 
 <script>
-import AppLayout from '@/Layouts/AppLayout.vue';
 import Button from '@/Components/Button.vue';
+import AppLayout from '@/Layouts/AppLayout.vue';
 
 export default {
     components: {

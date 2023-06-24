@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name', 255);
             $table->string('email', 255)->unique();
             $table->text('description')->default('Some description');
-            $table->string('avatar', 50)->default('placeholder');
+            $table->string('avatar', 255)->default('placeholder');
             $table->string('password', 255);
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
