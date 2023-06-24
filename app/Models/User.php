@@ -18,6 +18,7 @@ class User extends Authenticatable
     use TwoFactorAuthenticatable;
 
     protected $guarded = [];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -72,7 +73,6 @@ class User extends Authenticatable
 
     public function isAdmin()
     {
-        // return $this->role()->id == 1;
         return $this->role->id == 1;
     }
 }

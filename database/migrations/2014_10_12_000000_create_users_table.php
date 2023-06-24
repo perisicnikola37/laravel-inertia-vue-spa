@@ -14,25 +14,24 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('description')->default('placeholder');
-            $table->string('avatar')->default('placeholder');
+            $table->string('name', 255);
+            $table->string('email', 255)->unique();
+            $table->text('description')->default('Some description');
+            $table->string('avatar', 55)->default('placeholder');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password', 255);
+            $table->foreignId('current_team_id')->nullable()->constrained();
+            $table->foreignId('role_id')->constrained()->default(2);
             $table->rememberToken();
-            $table->foreignId('current_team_id')->nullable();
-            $table->bigInteger('role_id')->unsigned()->index()->default(2);
-            // $table->foreign('role_id')->references('id')->on('roles')->cascadeOnDelete();
             $table->timestamps();
+
+            $table->index('role_id');
         });
 
-        User::insert([
+        User::create([
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
-            'password' => bcrypt('nekalozinka'),
-            'created_at' => now(),
-            'updated_at' => now(),
+            'password' => bcrypt('password'),
             'role_id' => 1,
         ]);
     }

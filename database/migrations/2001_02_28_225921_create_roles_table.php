@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Role as ModelsRole;
+use App\Models\Role;
 use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -19,10 +19,10 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        ModelsRole::insert([
-            ['name' => 'Administrator', 'created_at' => Carbon::now()],
-            ['name' => 'Subscriber', 'created_at' => Carbon::now()],
-            ['name' => 'Guest', 'created_at' => Carbon::now()]
+        Role::create([
+            ['name' => 'Administrator'],
+            ['name' => 'Subscriber'],
+            ['name' => 'Guest']
         ]);
     }
 
