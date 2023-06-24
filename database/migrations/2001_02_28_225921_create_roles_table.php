@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Role::create([
+        Role::insert([
             ['name' => 'Administrator'],
             ['name' => 'Subscriber'],
             ['name' => 'Guest']

@@ -17,15 +17,13 @@ return new class extends Migration
             $table->string('name', 255);
             $table->string('email', 255)->unique();
             $table->text('description')->default('Some description');
-            $table->string('avatar', 55)->default('placeholder');
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('avatar', 50)->default('placeholder');
             $table->string('password', 255);
-            $table->foreignId('current_team_id')->nullable()->constrained();
-            $table->foreignId('role_id')->constrained()->default(2);
             $table->rememberToken();
+            $table->foreignId('current_team_id')->nullable();
+            $table->foreignId('role_id')->default(2);
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
-
-            $table->index('role_id');
         });
 
         User::create([

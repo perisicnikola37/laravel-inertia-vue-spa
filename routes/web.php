@@ -15,17 +15,14 @@ Route::get('/', function () {
     ]);
 });
 
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
+    Route::resource('/users', UserController::class);
+    Route::resource('/roles', RoleController::class);
+});
+
 Route::post('/users/delete', [UserController::class, 'deleteMultiple'])->name('users.delete');
 
-
-Route::resource('/users', UserController::class);
-Route::resource('/roles', RoleController::class);
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
