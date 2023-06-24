@@ -46,10 +46,8 @@ class RoleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Role $role)
     {
-        $role = Role::findOrFail($id);
-
         return Inertia::render('Roles/Edit', compact('role'));
     }
 
@@ -64,9 +62,9 @@ class RoleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Role $role)
     {
-        Role::destroy($id);
+        $role->delete();
 
         return back()->with('delete', 'Role has been deleted!');
     }

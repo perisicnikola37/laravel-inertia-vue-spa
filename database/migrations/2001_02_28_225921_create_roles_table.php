@@ -20,9 +20,9 @@ return new class extends Migration
         });
 
         Role::insert([
-            ['name' => 'Administrator'],
-            ['name' => 'Subscriber'],
-            ['name' => 'Guest']
+            ['name' => 'Administrator', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['name' => 'Subscriber', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['name' => 'Guest', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
         ]);
     }
 

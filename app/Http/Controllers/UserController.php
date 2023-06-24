@@ -16,12 +16,17 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        return Inertia::render('Users/Index', [
-            'users' => User::with('role')->when($request->term, function ($query, $term) {
+        $term = $request->input('term');
+
+        $users = User::with('role')
+            ->when($term, function ($query, $term) {
                 $query->where('name', 'LIKE', '%' . $term . '%')
                     ->orWhere('email', 'LIKE', '%' . $term . '%');
-            })->latest()->paginate(5),
-        ]);
+            })
+            ->latest()
+            ->paginate(5);
+
+        return Inertia::render('Users/Index', compact('users'));
     }
 
     /**
