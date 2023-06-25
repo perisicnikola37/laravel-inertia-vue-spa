@@ -60,7 +60,9 @@ class RoleController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Role::where('id', $id)->update($request->all());
+
+        return redirect('/roles')->with('success', 'Role has been updated!');
     }
 
     /**
