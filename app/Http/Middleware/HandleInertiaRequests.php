@@ -30,6 +30,11 @@ class HandleInertiaRequests extends Middleware
         return parent::version($request);
     }
 
+    protected $avatar = 'https://painrehabproducts.com/wp-content/uploads/2014/10/facebook-default-no-profile-pic.jpg';
+    protected $username = 'perisicnikola37';
+    protected $favicon = 'https://avatars.githubusercontent.com/u/47703742?s=280&v=4';
+
+
     /**
      * Defines the props that are shared by default.
      *
@@ -41,19 +46,20 @@ class HandleInertiaRequests extends Middleware
     {
         return array_merge(parent::share($request), [
             'flash' => [
-                'success' => session('success'),
-                'delete' => session('delete'),
+                'success' => session('success') ?? null,
+                'delete' => session('delete') ?? null,
             ],
             'counts' => [
                 'userCount' => User::count(),
                 'roleCount' => Role::count(),
             ],
-            'avatar' => 'https://painrehabproducts.com/wp-content/uploads/2014/10/facebook-default-no-profile-pic.jpg',
             'auth' => [
                 'user' => Auth::user()
             ],
             'currentYear' => date('Y'),
-            'username' => 'perisicnikola37'
+            'avatar' => $this->avatar,
+            'username' => $this->username,
+            'favicon' => $this->favicon,
         ]);
     }
 }
