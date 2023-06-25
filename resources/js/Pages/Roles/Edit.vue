@@ -24,8 +24,8 @@
                         </div>
                     </form>
                     <p class="text-xs text-center text-gray-500">
-                        &copy;2023 - <a class="text-blue-500" href="https://github.com/perisicnikola37"
-                            target="_blank">@perisicnikola37</a>
+                        &copy; {{ $page.props.currentYear }} - <a class="text-blue-500"
+                            href="https://github.com/perisicnikola37" target="_blank">@{{ $page.props.username }}</a>
                     </p>
                 </div>
 

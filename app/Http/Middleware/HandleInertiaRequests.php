@@ -51,7 +51,9 @@ class HandleInertiaRequests extends Middleware
             'avatar' => 'https://painrehabproducts.com/wp-content/uploads/2014/10/facebook-default-no-profile-pic.jpg',
             'auth' => [
                 'user' => Auth::user()
-            ]
+            ],
+            'currentYear' => date('Y'),
+            'username' => 'perisicnikola37'
         ]);
     }
 }
