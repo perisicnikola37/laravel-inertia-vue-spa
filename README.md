@@ -24,7 +24,7 @@ To get started with the installation, follow these steps:
 ``cd laravel-inertia-vue-project``
 
 3. Install/update composer
-``composer install | composer update``
+``composer install | composer update | composer install --ignore-platform-req=ext-iconv``
 
 4. Install npm
 ``npm install``
