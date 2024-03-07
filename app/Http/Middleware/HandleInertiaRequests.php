@@ -34,7 +34,6 @@ class HandleInertiaRequests extends Middleware
     protected $username = 'perisicnikola37';
     protected $favicon = 'https://avatars.githubusercontent.com/u/47703742?s=280&v=4';
 
-
     /**
      * Defines the props that are shared by default.
      *

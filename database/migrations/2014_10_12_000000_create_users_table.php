@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 255);
             $table->string('email', 255)->unique();
-            $table->text('description')->default('Some description');
+            $table->text('description')->nullable();
             $table->string('avatar', 255)->default('placeholder');
             $table->string('password', 255);
             $table->rememberToken();
