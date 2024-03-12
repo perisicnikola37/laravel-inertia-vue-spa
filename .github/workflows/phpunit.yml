@@ -28,7 +28,7 @@ jobs:
     - name: Compile assets
       run: |
         npm install
-        npm run development
+        npm run dev
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: sqlite
