@@ -28,7 +28,7 @@ jobs:
     - name: Build assets for production
       env:
         LARAVEL_BYPASS_ENV_CHECK: 1
-      run: npm install && npm run production
+      run: npm install && npm run dev
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: sqlite
