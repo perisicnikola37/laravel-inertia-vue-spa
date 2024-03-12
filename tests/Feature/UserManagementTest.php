@@ -79,9 +79,4 @@ class UserManagementTest extends TestCase
 
         $response->assertSee($user->created_at->format('d M Y'));
     }
-
-    public function test_a_failure()
-    {
-        $this->assertTrue(false);
-    }
 }
