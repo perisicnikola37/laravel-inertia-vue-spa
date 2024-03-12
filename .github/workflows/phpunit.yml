@@ -25,10 +25,10 @@ jobs:
       run: |
         mkdir -p database
         touch database/database.sqlite
-    - name: Compile assets
-      run: |
-        npm install
-        npm run dev
+    - name: Build assets for production
+      env:
+        LARAVEL_BYPASS_ENV_CHECK: 1
+      run: npm install && npm run production
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: sqlite
