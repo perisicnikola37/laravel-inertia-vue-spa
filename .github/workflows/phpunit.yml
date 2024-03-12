@@ -20,7 +20,7 @@ jobs:
           php-version: '8.0'
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: composer update --no-interaction --prefer-dist
 
       - name: Run PHPUnit
         run: php artisan test
