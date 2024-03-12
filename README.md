@@ -1,4 +1,4 @@
-## Laravel 10 + Inertia.js + Vue 3 -> single page application
+## Laravel 10 + Inertia.js + Vue.js 3 -> single page application
 
 <div style="display: flex;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png" alt="Laravel Logo" style="width: 40px;">
