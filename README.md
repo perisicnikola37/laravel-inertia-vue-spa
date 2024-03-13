@@ -11,7 +11,7 @@ The application is designed to provide a smooth and interactive user experience.
 
 ## Preview
 
-[gif.webm](https://user-images.githubusercontent.com/79047182/222930543-9883369c-1d8f-4985-9b61-baa933122596.webm)
+[gif.webm](capture.webm)
 
 ## Installation
 
