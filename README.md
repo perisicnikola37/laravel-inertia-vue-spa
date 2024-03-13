@@ -1,4 +1,4 @@
-## Laravel 10 + Inertia.js + Vue.js 3 -> single page application
+## Laravel 10 + Inertia.js + Vue.js 3 + Jetstream -> single page application
 
 <div style="display: flex;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png" alt="Laravel Logo" style="width: 40px;">
@@ -9,9 +9,9 @@
 <br>
 The application is designed to provide a smooth and interactive user experience. This SPA offers an all-in-one solution for managing users and roles, featuring an easy-to-use dashboard for administrators.
 
-## Preview
+## Demo video
 
-[gif.webm](capture.webm)
+[Demo video](https://github.com/perisicnikola37/laravel-inertia-vue-spa/assets/79047182/38ffbb70-0543-495b-8211-ed5e17257ff2)
 
 ## Installation
 
