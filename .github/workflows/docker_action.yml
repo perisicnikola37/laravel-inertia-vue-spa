@@ -1,9 +1,12 @@
-name: Docker Compose
+name: Docker compose action
 
 on:
   push:
     branches:
       - master
+    paths:
+      - 'Dockerfile'
+      - 'docker-compose.yml'
 
 jobs:
   build:

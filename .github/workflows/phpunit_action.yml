@@ -1,4 +1,4 @@
-name: Laravel
+name: PHP Unit action
 
 on:
   push:
