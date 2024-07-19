@@ -46,6 +46,15 @@ To get started with the installation, follow these steps:
 
 10. Visit the application at [http://localhost:8000](http://localhost:8000)
 
+## Tests
+
+To get started with the tests, make sure you have enabled these extensions in your "php.ini" file if you are running application on your local machine:
+
+```
+extension=pdo_sqlite
+extension=sqlite3
+```
+
 ## Features
 
 This application includes the following features:
