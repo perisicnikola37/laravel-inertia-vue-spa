@@ -5,15 +5,12 @@ import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 <template>
   <div>
     <div class="p-6 bg-white border-b border-gray-200 lg:p-8">
-      <ApplicationLogo class="block w-auto h-12" />
-      <h4 class="mt-8 text-2xl font-medium text-gray-900">
-        Welcome to <b>SPA</b> - single page application project!
-      </h4>
+      <ApplicationLogo class="block w-auto h-12 mb-4" />
       <b>Please leave a star &#11088;</b>
       <br />
       <a href="https://github.com/perisicnikola37/laravel-inertia-vue-spa" target="_blank"><b
           style="color: #6875f5">Click here</b></a>
-      <p class="mt-6 leading-relaxed text-gray-500">
+      <p class="mt-2 leading-relaxed text-gray-500">
         This SPA offers an all-in-one solution for managing users and roles, featuring an
         easy-to-use dashboard for administrators.
         <br />
