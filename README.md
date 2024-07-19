@@ -48,11 +48,21 @@ To get started with the installation, follow these steps:
 
 ## Tests
 
-To get started with the tests, make sure you have enabled these extensions in your "php.ini" file if you are running application on your local machine:
+To get started with the tests, make sure you have enabled these extensions in your "php.ini" file if you are running the application on your local machine:
 
 ```
 extension=pdo_sqlite
 extension=sqlite3
+```
+
+Before running test make sure you bilded application using following command:
+```
+npm run build
+```
+
+To run tests run:
+```
+php artisan test
 ```
 
 ## Features
@@ -62,12 +72,12 @@ This application includes the following features:
 -   User authentication and authorization
 -   CRUD operations for users and roles
 -   Real-time updates using Inertia.js and Vue.js
--   Two factor authentication
+-   Two-factor authentication
 -   Browser sessions
--   Full text searching
+-   Full-text searching
 -   Pagination
 -   Multi delete users
--   Inertia.ks progress indicator
+-   Inertia.js progress indicator
 -   Font Awesome icons
 -   Application analytics
 -   User default profile avatar
