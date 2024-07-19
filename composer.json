@@ -10,7 +10,9 @@
         "inertiajs/inertia-laravel": "^1.0.0",
         "laravel/framework": "^10.0",
         "laravel/jetstream": "^4.1.1",
-        "laravel/tinker": "^2.8"
+        "laravel/sanctum": "^3.3",
+        "laravel/tinker": "^2.8",
+        "tightenco/ziggy": "^2.2"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.0",

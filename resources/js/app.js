@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import { Link, createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createApp, h } from 'vue';
-import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
+import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist';
 
 // const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
@@ -25,3 +25,4 @@ createInertiaApp({
         color: '#6875F5',
     },
 });
+
