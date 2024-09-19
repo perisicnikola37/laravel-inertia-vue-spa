@@ -43,6 +43,7 @@ const submit = () => {
         </div>
 
         <form @submit.prevent="submit">
+            <p class="text-gray-400 text-xs mb-2">Check the credentials in the user migration file</p>
             <div>
                 <InputLabel for="email" value="Email" />
                 <TextInput id="email" v-model="form.email" type="email" class="mt-1 block w-full" required
