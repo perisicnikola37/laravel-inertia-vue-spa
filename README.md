@@ -13,39 +13,6 @@ The application is designed to provide a smooth and interactive user experience.
 
 [Demo video](https://github.com/perisicnikola37/laravel-inertia-vue-spa/assets/79047182/38ffbb70-0543-495b-8211-ed5e17257ff2)
 
-## Installation
-
-To get started with the installation, follow these steps:
-
-1. Clone the repository
-   `git clone https://github.com/perisicnikola37/laravel-inertia-vue-spa.git`
-
-2. Enter project directory
-   `cd laravel-inertia-vue-project`
-
-3. Install/update composer
-   `composer install | composer update | composer install --ignore-platform-req=ext-iconv`
-
-4. Install npm
-   `npm install`
-
-5. Set up the environment variables
-   `cp .env.example .env`
-
-6. Generate an application key
-   `php artisan key:generate`
-
-7. Configure the database
-   `php artisan migrate`
-
-8. Generate storage link
-   `php artisan storage:link`
-
-9. Start the development servers
-   `npm run dev` & `php artisan serve`
-
-10. Visit the application at [http://localhost:8000](http://localhost:8000)
-
 ## Tests
 
 To get started with the tests, make sure you have enabled these extensions in your "php.ini" file if you are running the application on your local machine:
